@@ -5,11 +5,11 @@ using namespace std;
 int main()
 {
     int n;
-    cout << "Введіть розмір матриці: ";
+    cout << "Enter size of matrix: ";
     cin >> n;
 
     int matrix[10][10];
-    cout << "Введіть елементи матриці:" << endl;
+    cout << "Enter elements of matrix:" << endl;
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             cin >> matrix[i][j];
@@ -17,7 +17,7 @@ int main()
     for (int i = 0; i < n; i++)
         matrix[i][i] = 0;
 
-    cout << "Матриця після видалення головної діагоналі (замінено на 0):" << endl;
+    cout << "Matrix after removing the main diagonal (replaced with 0):" << endl;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
@@ -42,14 +42,14 @@ int main()
         }
     }
 
-    cout << "Рядок з максимальним елементом (" << maxVal << "): " << maxRow + 1 << endl;
+    cout << "Row with maximum element (" << maxVal << "): " << maxRow + 1 << endl;
 
     for (int i = maxRow; i < n - 1; i++)
         for (int j = 0; j < n; j++)
             matrix[i][j] = matrix[i + 1][j];
     n--;
 
-    cout << "Матриця після видалення рядка:" << endl;
+    cout << "Matrix after removing the row:" << endl;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)

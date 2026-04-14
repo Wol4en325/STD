@@ -25,10 +25,10 @@ struct Payment
 
 void inputPayment(Payment &p, int number)
 {
-    cout << "\nПлатіж " << number << ":" << endl;
+    cout << "\nPayment " << number << ":" << endl;
     p.id = number;
 
-    cout << "Тип платежу (1 - Готівка, 2 - Картка, 3 - Банківський переказ): ";
+    cout << "Payment type (1 - Cash, 2 - Card, 3 - Bank transfer): ";
     int t;
     cin >> t;
     cin.ignore();
@@ -36,38 +36,38 @@ void inputPayment(Payment &p, int number)
 
     if (p.type == CASH)
     {
-        cout << "Примітка (готівка): ";
+        cout << "Note (cash): ";
         cin.getline(p.details.cashNote, 50);
     }
     else if (p.type == CARD)
     {
-        cout << "Номер картки: ";
+        cout << "Card number: ";
         cin.getline(p.details.cardNumber, 20);
     }
     else if (p.type == BANK_TRANSFER)
     {
-        cout << "IBAN код: ";
+        cout << "IBAN code: ";
         cin.getline(p.details.ibanCode, 30);
     }
 }
 
 void printPayment(Payment p)
 {
-    cout << "\nНомер платежу: " << p.id << endl;
+    cout << "\nPayment ID: " << p.id << endl;
 
     if (p.type == CASH)
     {
-        cout << "Тип: Готівка" << endl;
-        cout << "Примітка: " << p.details.cashNote << endl;
+        cout << "Type: Cash" << endl;
+        cout << "Note: " << p.details.cashNote << endl;
     }
     else if (p.type == CARD)
     {
-        cout << "Тип: Картка" << endl;
-        cout << "Номер картки: " << p.details.cardNumber << endl;
+        cout << "Type: Card" << endl;
+        cout << "Card number: " << p.details.cardNumber << endl;
     }
     else if (p.type == BANK_TRANSFER)
     {
-        cout << "Тип: Банківський переказ" << endl;
+        cout << "Type: Bank transfer" << endl;
         cout << "IBAN: " << p.details.ibanCode << endl;
     }
 
@@ -77,7 +77,7 @@ void printPayment(Payment p)
 int main()
 {
     int n;
-    cout << "Введіть кількість платежів: ";
+    cout << "Enter number of payments: ";
     cin >> n;
     cin.ignore();
 
@@ -86,7 +86,7 @@ int main()
     for (int i = 0; i < n; i++)
         inputPayment(payments[i], i + 1);
 
-    cout << "\n========== Всі платежі ==========" << endl;
+    cout << "\n========== All payments ==========" << endl;
     for (int i = 0; i < n; i++)
         printPayment(payments[i]);
 
@@ -101,10 +101,10 @@ int main()
             transferCount++;
     }
 
-    cout << "========== Статистика ==========" << endl;
-    cout << "Готівка: " << cashCount << endl;
-    cout << "Картка: " << cardCount << endl;
-    cout << "Банківський переказ: " << transferCount << endl;
+    cout << "========== Statistics ==========" << endl;
+    cout << "Cash: " << cashCount << endl;
+    cout << "Card: " << cardCount << endl;
+    cout << "Bank transfer: " << transferCount << endl;
 
     return 0;
 }

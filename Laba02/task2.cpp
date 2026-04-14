@@ -26,7 +26,7 @@ int main()
     srand(time(0));
 
     int n;
-    cout << "Введіть розмір масиву: ";
+    cout << "Enter size of array: ";
     cin >> n;
 
     int A[100];
@@ -48,7 +48,7 @@ int main()
     cout << endl;
 
     int X;
-    cout << "Введіть значення X: ";
+    cout << "Enter value of X: ";
     cin >> X;
 
     int i = 0;
@@ -73,12 +73,12 @@ int main()
         n++;
     }
 
-    cout << "Результат: ";
+    cout << "Result: ";
     for (int i = 0; i < n; i++)
         cout << A[i] << " ";
     cout << endl;
 
-    cout << "Просторова складність: O(n), де n = " << n << endl;
+    cout << "Space complexity: O(n), where n = " << n << endl;
 
     return 0;
 }

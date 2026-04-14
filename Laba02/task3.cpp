@@ -38,12 +38,12 @@ int main()
     int matrix[5][5];
     int iterationCount = 0;
 
-    cout << "Введіть елементи матриці 5x5:" << endl;
+    cout << "Enter elements of 5x5 matrix:" << endl;
     for (int i = 0; i < 5; i++)
         for (int j = 0; j < 5; j++)
             cin >> matrix[i][j];
 
-    cout << "Початкова матриця:" << endl;
+    cout << "Initial matrix:" << endl;
     printMatrix(matrix);
 
     int maxRow = 0, maxCol = 0;
@@ -63,7 +63,7 @@ int main()
     {
         swapRows(matrix, 0, maxRow);
         iterationCount++;
-        cout << "Після перестановки рядків (ітерація " << iterationCount << "):" << endl;
+        cout << "After swapping rows (iteration " << iterationCount << "):" << endl;
         printMatrix(matrix);
     }
 
@@ -71,12 +71,12 @@ int main()
     {
         swapCols(matrix, 0, maxCol);
         iterationCount++;
-        cout << "Після перестановки стовпців (ітерація " << iterationCount << "):" << endl;
+        cout << "After swapping columns (iteration " << iterationCount << "):" << endl;
         printMatrix(matrix);
     }
 
-    cout << "Максимальний елемент тепер у лівому верхньому куті." << endl;
-    cout << "Часова складність алгоритму: O(n^2)" << endl;
+    cout << "Maximum element is now in the top-left corner." << endl;
+    cout << "Time complexity of the algorithm: O(n^2)" << endl;
 
     return 0;
 }

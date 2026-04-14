@@ -29,11 +29,11 @@ void bubbleSort(int arr[], int n, bool ascending)
 int main()
 {
     int n;
-    cout << "Введіть розмір масиву: ";
+    cout << "Enter size of array: ";
     cin >> n;
 
     int A[100];
-    cout << "Введіть елементи масиву: ";
+    cout << "Enter elements of array: ";
     for (int i = 0; i < n; i++)
         cin >> A[i];
 
@@ -74,7 +74,7 @@ int main()
         index++;
     }
 
-    cout << "Результат: ";
+    cout << "Result: ";
     for (int i = 0; i < n; i++)
         cout << A[i] << " ";
     cout << endl;
@@ -82,8 +82,8 @@ int main()
     double timeAsc = (double)(endAsc - startAsc) / CLOCKS_PER_SEC;
     double timeDesc = (double)(endDesc - startDesc) / CLOCKS_PER_SEC;
 
-    cout << "Час сортування за зростанням: " << timeAsc << " сек" << endl;
-    cout << "Час сортування за спаданням: " << timeDesc << " сек" << endl;
+    cout << "Time for ascending sort: " << timeAsc << " sec" << endl;
+    cout << "Time for descending sort: " << timeDesc << " sec" << endl;
 
     return 0;
 }

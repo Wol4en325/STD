@@ -22,19 +22,19 @@ double salaryWithTax(Worker w)
 
 void printWorker(Worker w)
 {
-    cout << "Прізвище: " << w.name << endl;
-    cout << "Посада: " << w.position << endl;
-    cout << "Рік вступу: " << w.startYear << endl;
-    cout << "Зарплата (до податку): " << w.salary << " грн" << endl;
-    cout << "Стаж роботи: " << experience(w) << " років" << endl;
-    cout << "Зарплата (після податку 33%): " << salaryWithTax(w) << " грн" << endl;
+    cout << "Name: " << w.name << endl;
+    cout << "Position: " << w.position << endl;
+    cout << "Start year: " << w.startYear << endl;
+    cout << "Salary (before tax): " << w.salary << endl;
+    cout << "Work experience: " << experience(w) << " years" << endl;
+    cout << "Salary (after 33% tax): " << salaryWithTax(w) << endl;
     cout << "----------------------------" << endl;
 }
 
 int main()
 {
     int n;
-    cout << "Введіть кількість працівників: ";
+    cout << "Enter number of workers: ";
     cin >> n;
     cin.ignore();
 
@@ -42,23 +42,23 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        cout << "\nПрацівник " << i + 1 << ":" << endl;
+        cout << "\nWorker " << i + 1 << ":" << endl;
 
-        cout << "Прізвище та ініціали: ";
+        cout << "Enter name: ";
         cin.getline(workers[i].name, 50);
 
-        cout << "Посада: ";
+        cout << "Enter position: ";
         cin.getline(workers[i].position, 50);
 
-        cout << "Рік вступу на роботу: ";
+        cout << "Enter start year: ";
         cin >> workers[i].startYear;
 
-        cout << "Зарплата: ";
+        cout << "Enter salary: ";
         cin >> workers[i].salary;
         cin.ignore();
     }
 
-    cout << "\n========== Інформація про працівників ==========" << endl;
+    cout << "\n========== Workers information ==========" << endl;
     for (int i = 0; i < n; i++)
         printWorker(workers[i]);
 

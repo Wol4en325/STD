@@ -1,0 +1,8 @@
+105 Laptop 25000
+203 Monitor 8000
+150 Keyboard 1200
+310 Mouse 800
+178 Printer 12000
+420 Scanner 6500
+130 Webcam 2000
+275 Headphones 3500
